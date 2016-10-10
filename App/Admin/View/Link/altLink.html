@@ -1,0 +1,76 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+						<span class="icon">
+							<i class="icon-th"></i>
+						</span>
+                        <h5>链接添加</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="{:U('altLink')}" method="post" class="form-horizontal"  enctype="multipart/form-data">
+                            <div class="control-group">
+                                <label class="control-label">链接名：</label>
+                                <div class="controls">
+                                    <input type="text" name="link_name" value="{$list['link_name']}" />
+                                    <input type="hidden" name="id" value="{$list['id']}" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">链接地址</label>
+                                <div class="controls">
+                                    <input type="text" name="href" value="{$list['href']}" />
+                                    <p class="help-block">请填写完整链接地址，例：http://www.baidu.com</p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">是否开启</label>
+                                <div class="controls">
+                                    <select name="status">
+                                        <if condition="$list['status'] eq 1">
+                                            <option value="1" selected="selected">开启
+                                            <option value="0">关闭
+                                        <else/>
+                                            <option value="1">开启
+                                            <option value="0" selected="selected">关闭
+                                        </if>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">链接类型</label>
+                                <div class="controls">
+                                    <select name="type">
+                                        <if condition="$list['type'] eq 1">
+                                            <option value="1" selected="selected">友情链接
+                                            <option value="0">其他链接
+                                        <else/>
+                                            <option value="1">友情链接
+                                            <option value="0" selected="selected">其他链接
+                                        </if>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">修改图标</label>
+                                <div class="controls">
+                                    <input type="file" id="exampleInputFile" name="img">
+                                    <p class="help-block">建议图标大小为：50*50px
+                                        <if condition="$list['img'] neq ''"><img src="__ROOT__{$list['img']}" style="width: 50px;"></if>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">保存</button>
+                                <button type="reset" class="btn btn-primary">重置</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

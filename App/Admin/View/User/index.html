@@ -1,0 +1,64 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>用户信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width:5%;">id</th>
+                                    <th style="width:5%;">用户账号</th>
+                                    <th style="width:5%;">登录次数</th>
+                                    <th style="width:8%;">注册时间</th>
+                                    <th style="width:8%;">上一次登录时间</th>
+                                    <th style="width:8%;">上一次登录地址</th>
+                                    <th style="width:5%;">手机</th>
+                                    <th style="width:5%;">邮箱</th>
+                                    <th style="width:5%;">状态</th>
+                                    <th style="width:10%;">用户所属组别</th>
+                                    <th style="width:8%;">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <volist name="list" id="v"> -->
+                                    <tr>
+                                        <td>{$v.id}</td>
+                                        <td>{$v.username}</td>
+                                        <td>{$v.login_count}</td>
+                                        <td>{$v.register_time|date='Y-m-d H:i',###}</td>
+                                        <td>{$v.last_login_time|date='Y-m-d H:i',###}</td>
+                                        <td>{$v.last_login_ip}</td>
+                                        <td>{$v.phone}</td>
+                                        <td>{$v.email}</td>
+                                        <td><if condition="$v['status'] eq 1"><i class="icon-ok" title="开启"></i><else/><i class="icon-remove" title="关闭"></i></if></td>
+                                        <td>
+                                            <ul>
+                                                <!-- <volist name="v.role" id="vv"> -->
+                                                <li>{$vv.name}({$vv.title})</li>
+                                                <!-- </volist> -->
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <a href="{:U('access', array('uid' => $v['id']))}" title="赋予角色"><i class="icon-wrench"></i></a>&nbsp;&nbsp;
+                                            <a href="{:U('updateUser', array('id' => $v['id']))}" title="编辑"><i class="icon-pencil"></i></a>&nbsp;&nbsp;
+                                            <a href="{:U('deleteUser', array('id' => $v['id']))}" title="删除" onclick="if(!confirm('确定删除？')){return false;}"><i class="icon-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                <!-- </volist> -->
+                                <tr><td colspan="13">{$page}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

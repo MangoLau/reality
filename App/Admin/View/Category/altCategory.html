@@ -1,0 +1,87 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+						<span class="icon">
+							<i class="icon-th"></i>
+						</span>
+                        <h5>文章类型添加</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form class="form-horizontal">
+                            <div class="control-group">
+                                <label class="control-label">父类型</label>
+                                <div class="controls">
+                                    <select name="pCategory" id="pid" class="opt-input">
+                                        <if condition="$category['pid'] eq 0">
+                                            <option value="0" selected="selected">大类</option>
+                                            <else/>
+                                            <option value="0">大类</option>
+                                        </if>
+                                        <volist name="list" id="vo">
+                                            <if condition="$vo['id'] eq $category['pid']">
+                                                <option value="{$vo['id']}" selected="selected">{$vo['pad']}{$vo['name']}</option>
+                                                <else/>
+                                                <option value="{$vo['id']}">{$vo['pad']}{$vo['name']}</option>
+                                            </if>
+                                        </volist>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">类型名</label>
+                                <div class="controls">
+                                    <input type="text" id="name" name="name" maxlength="64" value="{$category['name']}" />
+                                    <input type="hidden" id="actid" value="{$category['id']}" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">备注</label>
+                                <div class="controls">
+                                    <input type="text" id="remark" name="remark" maxlength="64" value="{$category['remark']}" />
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary sure">保存</button>
+                                <button type="reset" class="btn btn-primary">重置</button>
+                                <a class="btn btn-primary" href="{:U('index')}">返回</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+    <script type="application/javascript">
+        $(document).ready(function(){
+            $('form .sure').click(function(){
+                var _pid = $('#pid').val(),
+                        _id = $('#actid').val(),
+                        _name = $('#name').val(),
+                        _remark = $('#remark').val();
+                if(_name.trim() == ''){
+                    alert('类型名不能为空！');
+                    return false;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "{:U('Category/altCategory')}",
+                    data: {id:_id,pid:_pid,name:_name,remark:_remark},
+                    success: function(result){
+                        if(result.success){
+                            alert('修改成功！');
+                            window.location.href = "{:U('Category/index')}";
+                        } else {
+                            alert(result.msg);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</block>

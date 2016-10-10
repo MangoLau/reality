@@ -1,0 +1,116 @@
+[ 2016-10-09T11:13:57+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `r_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `r_user` WHERE `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:14:07+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `r_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `r_user` WHERE `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:14:27+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `r_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `r_user` WHERE `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:14:59+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-10-09T11:19:47+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `r_user` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `r_user` WHERE `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:21:43+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+
+[ 2016-10-09T11:21:49+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `r_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `r_user` WHERE `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `r_user` SET `last_login_time`='1475983309',`login_count`=login_count+1,`last_login_ip`='0.0.0.0' WHERE `id` = 1 [ RunTime:0.0052s ]
+
+[ 2016-10-09T11:29:02+08:00 ] ::1 /reality/index.php/Admin/Category/addCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `r_category` [ RunTime:0.0005s ]
+SQL: INSERT INTO `r_category` (`pid`,`name`,`remark`,`created`) VALUES ('0','租房信息','关于租房的信息类目','2016-10-09 11:29:02') [ RunTime:0.0003s ]
+
+[ 2016-10-09T11:32:46+08:00 ] ::1 /reality/index.php/Admin/Content/addContent.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `r_content` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: uid D:\wamp64\www\reality\App\Admin\Model\ContentModel.class.php 第 48 行.
+SQL: INSERT INTO `r_content` (`title`,`cid`,`keyword`,`description`,`content`,`created`,`uid`) VALUES ('白石洲租房','1','白石洲,租房','白石洲','&lt;p&gt;白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;http://www.clock.com/Upload/image/2016/10/09/1475983953121551.png&quot; title=&quot;1475983953121551.png&quot; alt=&quot;{3DF0FB60-03E1-495B-8DA1-CC41FB93D57F}.png&quot;/&gt;&lt;/p&gt;','2016-10-09 11:32:46','1') [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:33:05+08:00 ] ::1 /reality/index.php/Admin/Content/audit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `r_content` [ RunTime:0.0005s ]
+SQL: UPDATE `r_content` SET `status`='1' WHERE `id` = 1 [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:40:02+08:00 ] ::1 /reality/index.php/Admin/Content/altContent.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `r_content` [ RunTime:0.0005s ]
+SQL: UPDATE `r_content` SET `title`='白石洲租房',`keyword`='白石洲,租房',`description`='白石洲',`content`='&lt;p&gt;白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/Upload/image/2016/10/09/1475984396174622.png&quot; title=&quot;1475984396174622.png&quot; alt=&quot;海量精品png图库第五缉（锐普论坛） (122).png&quot;/&gt;&lt;/p&gt;',`modified`='2016-10-09 11:40:02' WHERE `id` = 1 [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:50:01+08:00 ] ::1 /reality/index.php/Admin/Content/altContent.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `r_content` [ RunTime:0.0006s ]
+SQL: UPDATE `r_content` SET `title`='白石洲租房',`keyword`='白石洲,租房',`description`='白石洲',`content`='&lt;p&gt;白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/Upload/image/2016/08/04/1470280425124749.png&quot; title=&quot;1475984396174622.png&quot; alt=&quot;1470280425124749.png&quot;/&gt;&lt;/p&gt;',`modified`='2016-10-09 11:50:01' WHERE `id` = 1 [ RunTime:0.0002s ]
+
+[ 2016-10-09T11:52:07+08:00 ] ::1 /reality/index.php/Admin/Content/altContent.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `r_content` [ RunTime:0.0004s ]
+SQL: UPDATE `r_content` SET `title`='测试测试',`keyword`='白石洲,租房',`description`='白石洲',`content`='&lt;p&gt;白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房白石洲租房&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/Upload/image/2016/08/04/1470280425124749.png&quot; title=&quot;1475984396174622.png&quot; alt=&quot;1470280425124749.png&quot;/&gt;&lt;/p&gt;',`modified`='2016-10-09 11:52:07' WHERE `id` = 1 [ RunTime:0.0002s ]
+
+[ 2016-10-09T12:12:58+08:00 ] ::1 /reality/index.php/Admin/Content/addContent.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `r_content` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: uid D:\wamp64\www\reality\App\Admin\Model\ContentModel.class.php 第 48 行.
+SQL: INSERT INTO `r_content` (`title`,`cid`,`keyword`,`description`,`content`,`created`,`uid`) VALUES ('测试2','1','','','&lt;p&gt;&lt;img src=&quot;/Upload/image/2016/10/09/1475986377107536.png&quot; title=&quot;1475986377107536.png&quot; alt=&quot;laizi.png&quot;/&gt;&lt;/p&gt;','2016-10-09 12:12:58','1') [ RunTime:0.0002s ]
+
+[ 2016-10-09T12:13:36+08:00 ] ::1 /reality/index.php/Admin/Content/audit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `r_content` [ RunTime:0.0004s ]
+SQL: UPDATE `r_content` SET `status`='1' WHERE `id` = 2 [ RunTime:0.0002s ]
+

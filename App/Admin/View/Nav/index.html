@@ -1,0 +1,243 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>导航信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width:5%;">编号</th>
+                                    <th style="width:10%;">导航名</th>
+                                    <th style="width:10%;">导航链接</th>
+                                    <th style="width:5%;">是否显示</th>
+                                    <th style="width:5%;">排序</th>
+                                    <th style="width:10%;">创建时间</th>
+                                    <th style="width:10%;">修改时间</th>
+                                    <th style="width:10%;">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="list" id="v">
+                                    <form class="altForm">
+                                    <tr>
+                                        <td>{$i}</td>
+                                        <td>{$v['pad']}<input type="text" name="nav_name" class="nav_name" value="{$v['nav_name']}" /></td>
+                                        <td><input type="text" name="link" class="link" value="{$v['link']}" /></td>
+                                        <td>
+                                            <if condition="$v['display'] eq 1">
+                                                <input type="radio" name="display" class="display" value="1" checked />显示
+                                                <input type="radio" name="display" class="display" value="0" />隐藏
+                                                <else/>
+                                                <input type="radio" name="display" class="display" value="1" />显示
+                                                <input type="radio" name="display" class="display" value="0" checked />隐藏
+                                            </if>
+                                        </td>
+                                        <td><input type="text" name="sort" class="sort" value="{$v['sort']}" /></td>
+                                        <td>{$v['created']}</td>
+                                        <td>{$v['modified']}</td>
+                                        <td>
+                                            <a href="{:U('addNav', array('pid' => $v['id']))}" title="增加子导航"><i class="icon-plus"></i></a>&nbsp;&nbsp;
+                                            <a data-id="{$v['id']}" class="alter" title="编辑"><i class="icon-pencil"></i></a>&nbsp;&nbsp;
+                                            <a data-id="{$v['id']}" class="delete" title="删除"><i class="icon-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    </form>
+                                </volist>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>类型信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th style="width:5%;">编号</th>
+                                <th style="width:10%;">类型名</th>
+                                <th style="width:10%;">链接地址</th>
+                                <th style="width:10%;">选择模块</th>
+                                <th style="width:10%;">选择方式</th>
+                                <th style="width:10%;">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="cats" id="vo">
+                                <tr>
+                                    <td>{$i}</td>
+                                    <td class="cname" data-name="{$vo['name']}">{$vo['pad']}{$vo['name']}</td>
+                                    <td>
+                                        <input type="text" name="link" class="link" data-link="?cid={$vo['id']}" data-cid="{$vo['id']}" readonly="readonly" />
+                                    </td>
+                                    <td>
+                                        <select class="opt-input controller">
+                                            <option value="0" data-link="">选择模块</option>
+                                            <volist name="nodes" id="vo">
+                                                <option value="{$vo['id']}" data-link="{$vo['name']}">{$vo['title']}</option>
+                                            </volist>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="opt-input action">
+                                            <option value="0" selected="selected">选择方式</option>
+                                        </select>
+                                    </td>
+                                    <td><a class="btn btn-primary add-nav" title="增加导航">增加</i></a>
+                                    </td>
+                                </tr>
+                            </volist>
+                            <tr><td colspan="6">{$page}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+<script>
+    $(function(){
+        $('.controller').change(function(){
+            var $tr = $(this).parents('tr');
+            var _selected = $(this).val();
+            var _link = $(this).find("option:selected").attr('data-link');
+            var _value = $tr.find('.link').attr('data-link');
+            var _html = '<option value="0" data-link="">选择方式</option>';
+            if(_selected != 0){
+                $tr.find('.link').val(_link+_value);
+                $.ajax({
+                    url:"{:U('getHomenodeByPid')}",
+                    data: {pid:_selected},
+                    dataType: 'json',
+                    type: 'GET',
+                    success: function (res) {
+                        if(res.code == 200 && res.data) {
+                            $.each(res.data, function(key,value){
+                                _html += '<option value="'+value.id+'" data-link="'+value.name+'">'+value.title+'</option>';
+                            });
+                            $tr.find('.action').html(_html);
+                        } else {
+                            alert(res.msg);
+                        }
+                    }
+                });
+            } else {
+                $tr.find('.link').val('');
+            }
+        });
+
+        $('.action').change(function(){
+            var $tr = $(this).parents('tr'),
+                    $controller = $tr.find('.controller'),
+                    $action = $tr.find('.action'),
+                    _controller_link = $controller.find("option:selected").attr('data-link'),
+                    _action_link = $action.find('option:selected').attr('data-link'),
+                    _value = $tr.find('.link').attr('data-link');
+            if (_action_link == ''){
+                $tr.find('.link').val(_controller_link+_value);
+            } else {
+                $tr.find('.link').val(_controller_link+'/'+_action_link+_value);
+            }
+        });
+
+        $('.add-nav').click(function(){
+            var $tr = $(this).parents('tr'),
+                    _link = $tr.find('.link').val(),
+                    _cid = $tr.find('.link').attr('data-cid'),
+                    _name = $tr.find('.cname').attr('data-name');
+            if (_link == '' || _link == 'undefine') {
+                alert('链接地址不能为空！');
+                return false;
+            }
+            if (_cid == 'undefine' || _cid == '' || _name == 'undefine' || _name == '') {
+                alert('数据错误请刷新或者联系开发人员');
+                return false;
+            }
+            $.ajax({
+                type: 'POST',
+                url: "{:U('addNav')}",
+                dataType: 'json',
+                data: {cid:_cid, link:_link, nav_name: _name, type: 1},
+                success: function(data){
+                    if(data.success == true){
+                        alert('新增成功');
+                        window.location.reload();
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+
+        $('.alter').click(function(){
+            var $tr = $(this).parents('tr');
+            var _id = $(this).attr('data-id'),
+                    _nav_name = $tr.find('.nav_name').val(),
+                    _link = $tr.find('.link').val(),
+                    _display = $tr.find('input[name="display"]').val(),
+                    _sort = $tr.find('.sort').val();
+            if (_nav_name.trim() == '') {
+                alert('导航名不能为空');
+                return false;
+            }
+            if (_link.trim() == '') {
+                alert('链接不能为空');
+                return false;
+            }
+            $.ajax({
+                url: "{:U('altNav')}",
+                type: 'POST',
+                dataType: 'json',
+                data: {id:_id, nav_name:_nav_name, link:_link, display:_display, sort:_sort},
+                success: function(data){
+                    if (data.success == true) {
+                        alert('修改成功');
+                        window.location.reload();
+                    } else {
+                        alert(data.msg);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        $('.delete').click(function(){
+            if(!confirm('确定删除？')){return false;}
+            var _id = $(this).attr('data-id');
+            $.ajax({
+                url: "{:U('delNav')}",
+                type: 'GET',
+                dataType: 'json',
+                data: {id:_id},
+                success: function(data){
+                    if (data.success == true) {
+                        alert('修改成功');
+                        window.location.reload();
+                    } else {
+                        alert(data.msg);
+                        return false;
+                    }
+                }
+            })
+        });
+    });
+</script>
+</block>

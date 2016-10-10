@@ -1,0 +1,53 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>链接信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width:5%;">编号</th>
+                                    <th style="width:10%;">链接名</th>
+                                    <th style="width:10%;">链接地址</th>
+                                    <th style="width:5%;">状态</th>
+                                    <th style="width:10%;">链接类型</th>
+                                    <th style="width:10%;">图标地址</th>
+                                    <th style="width:10%;">创建时间</th>
+                                    <th style="width:10%;">修改时间</th>
+                                    <th style="width:10%;">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="list" id="v">
+                                    <tr>
+                                        <td>{$i}</td>
+                                        <td>{$v['link_name']}</td>
+                                        <td>{$v['href']}</td>
+                                        <td><if condition="$v[status] eq 1">开启<i class="icon-ok"></i><else/>关闭<i class="icon-remove"></i></if></td>
+                                        <td><if condition="$v['type'] eq 1">友情链接<else/>其他链接</if></td>
+                                        <td><if condition="$v['img'] neq ''"><img src="__ROOT__{$v['img']}" style="width: 50px;" /></if></td>
+                                        <td>{$v['created']}</td>
+                                        <td>{$v['modified']}</td>
+                                        <td>
+                                            <a href="{:U('altLink', array('id' => $v['id']))}" title="编辑"><i class="icon-pencil"></i></a>&nbsp;&nbsp;
+                                            <a href="{:U('delLink', array('id' => $v['id']))}" title="删除" onclick="if(!confirm('确定删除？')){return false;}"><i class="icon-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                <tr><td colspan="9">{$page}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

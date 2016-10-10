@@ -1,0 +1,80 @@
+<extend name="Public:default" />
+<block name="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="icon-th"></i>
+						</span>
+						<h5>节点编辑</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form action="{:U('updateNode')}" method="post" class="form-horizontal">
+							<div class="control-group">
+								<label class="control-label">名称</label>
+								<div class="controls">
+									<input type="text" name="name" value="{$list['name']}" style="height:30px;"/>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">描述</label>
+								<div class="controls">
+									<input type="text" name="title" value="{$list['title']}" style="height:30px;"/>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">是否开启</label>
+								<div class="controls">
+									<select name="status">
+										<if condition="$list[status] eq 1">
+											<option value="1" selected="selected">开启
+											<option value="0">关闭
+										<else/>
+											<option value="1">开启
+											<option value="0" selected="selected">关闭
+										</if>
+									</select>
+								</div>
+							</div>
+                            <div class="control-group">
+                                <label class="control-label">是否显示</label>
+                                <div class="controls">
+                                    <select name="display">
+                                        <if condition="$list['display'] eq 1">
+                                        <option value="1" selected="selected">显示
+                                        <option value="0">隐藏
+                                        <else/>
+                                        <option value="1">显示
+                                        <option value="0" selected="selected">隐藏
+                                        </if>
+                                    </select>
+                                </div>
+                            </div>
+							<div class="control-group">
+								<label class="control-label">排序</label>
+								<div class="controls">
+									<input name="sort" value="{$list[sort]}" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">备注</label>
+								<div class="controls">
+									<textarea name="remark">{$list[remark]}</textarea>
+								</div>
+							</div>
+							<div class="form-actions">
+								<input type="hidden" name="id" value="{$list[id]}"/>
+								<input type="hidden" name="pid" value="{$list[pid]}"/>
+								<input type="hidden" name="level" value="{$list[level]}"/>
+								<button type="submit" class="btn btn-primary">保存</button>
+								<a href="{:U('index')}" class="btn btn-primary">返回</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</block>

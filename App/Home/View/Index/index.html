@@ -1,0 +1,19 @@
+<include file="Public/header" />
+<div id="wrap">
+    <!-- 首页内容左侧 start -->
+    <div id="left">
+        <ul>
+            <volist name="newest" id="v">
+                <li>
+                    <a href="{:U('Content/baseList',array('id'=>$v['id']))}" title="{$v['title']}">{$v['title']}<span>{$v['created']}</span></a>
+                    <div>
+                        {:cuthtml(html_entity_decode($v['content']), 300);}
+                    </div>
+                </li>
+            </volist>
+        </ul>
+    </div>
+    <!-- 首页内容左侧 end -->
+    <include file="Public/righter" />
+</div>
+<include file="Public/footer" />

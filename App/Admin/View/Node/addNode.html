@@ -1,0 +1,69 @@
+<extend name="Public:default" />
+<block name="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="icon-th"></i>
+						</span>
+						<h5>{$type}节点添加</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form action="{:('addNode')}" method="post" class="form-horizontal">
+							<div class="control-group">
+								<label class="control-label">{$type}名称</label>
+								<div class="controls">
+									<input type="text" name="name"/>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">{$type}描述</label>
+								<div class="controls">
+									<input type="text" name="title" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">是否开启</label>
+								<div class="controls">
+									<select name="status">
+										<option value="1" selected="selected">开启
+										<option value="0">关闭
+									</select>
+								</div>
+							</div>
+                            <div class="control-group">
+                                <label class="control-label">是否显示</label>
+                                <div class="controls">
+                                    <select name="display">
+                                        <option value="1" selected="selected">显示
+                                        <option value="0">隐藏
+                                    </select>
+                                </div>
+                            </div>
+							<div class="control-group">
+								<label class="control-label">排序</label>
+								<div class="controls">
+									<input name="sort"/>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">备注</label>
+								<div class="controls">
+									<textarea name="remark"></textarea>
+								</div>
+							</div>
+							<div class="form-actions">
+								<input type="hidden" name="pid" value="{$pid}"/>
+								<input type="hidden" name="level" value="{$level}"/>
+								<button type="submit" class="btn btn-primary">保存</button>
+								<button type="reset" class="btn btn-primary">重置</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</block>

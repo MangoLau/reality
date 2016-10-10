@@ -1,0 +1,35 @@
+<extend name="Public:default" />
+<block name="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+						<h5>类型列表</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<table class="table table-bordered table-striped">
+							<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th>&nbsp;</th>
+							</tr>
+							</thead>
+							<tbody>
+							<volist name="info" id="vo">
+								<tr>
+									<td>{$key}</td>
+									<td><span class="catName">{$vo}</span></td>
+								</tr>
+							</volist>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</block>

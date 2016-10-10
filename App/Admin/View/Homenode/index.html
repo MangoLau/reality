@@ -1,0 +1,39 @@
+<extend name="Public:default" />
+<block name="container">
+	<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="widget-box">
+						<div class="widget-title">
+							<span class="icon">
+								<i class="icon-th"></i>
+							</span>
+							<h5>节点列表</h5>
+						</div>
+						<div class="widget-content nopadding" id="wrap">
+                            <a href="{:U('addHomenode')}" class="btn btn-primary btn-large">添加控制器</a>
+							<!-- <volist name="list" id="app"> -->
+								<div class="app">
+									<p>
+										<strong>{$app.title}</strong>
+										[<a href="{:U('addHomenode', array('pid' => $app['id']))}">添加方法</a>]
+										[<a href="{:U('altHomenode', array('id' => $app['id']))}">修改</a>]
+										[<a href="{:U('delHomenode', array('id' => $app['id']))}" onclick="if(!confirm('确认删除？')){return false;}">删除</a>]
+									</p>
+									<!-- <volist name="app.child" id="action"> -->
+										<dl>
+											<dt>
+												<strong>{$action.title}</strong>
+												[<a href="{:U('altHomenode', array('id' => $action['id']))}">修改</a>]
+												[<a href="{:U('delHomenode', array('id' => $action['id']))}" onclick="if(!confirm('确认删除？')){return false;}">删除</a>]
+											</dt>
+										</dl>
+									<!-- </volist> -->
+								</div>
+							<!-- </volist> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</block>

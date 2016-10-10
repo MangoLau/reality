@@ -1,0 +1,62 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>角色信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="{:U('access')}" method="post" name="fom1">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width:5%;">选择</th>
+                                        <th style="width:5%;">编号</th>
+                                        <th style="width:5%;">父级编号</th>
+                                        <th style="width:10%;">角色名</th>
+                                        <th style="width:15%;">角色简称</th>
+                                        <th style="width:45%;">备注</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <volist name="list" id="v"> -->
+                                        <tr>
+                                            <!-- <if condition="$v['selected'] neq null"> -->
+                                            <td><input type="checkbox" name="access[]" value="{$v.id}" checked="checked"/></td>
+                                            <!-- <else/> -->
+                                            <td><input type="checkbox" name="access[]" value="{$v.id}"/></td>
+                                            <!-- </if> -->
+                                            <td>{$v.id}</td>
+                                            <!-- <if condition="$v[pid] neq null"> -->
+                                            <td>{$v.pid}</td>
+                                            <!-- <else/> -->
+                                            <td>无</td>
+                                            <!-- </if> -->
+                                            <td>{$v.name}</td>
+                                            <td>{$v.title}</td>
+                                            <td>{$v.remark}</td>
+                                        </tr>
+                                    <!-- </volist> -->
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="6">
+                                            <input type="hidden" name="uid" value="{$uid}" />
+                                            <input type="submit" name="sub1" value="提交" class="btn btn-primary"  onclick="if(!confirm('确认提交？')){return false;}"/>
+                                            <a href="{:U('index')}"  class="btn btn-primary">返回列表</a>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

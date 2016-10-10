@@ -1,0 +1,159 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+						<span class="icon">
+							<i class="icon-th"></i>
+						</span>
+                        <h5>文章搜索</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form class="form-horizontal fom" action="{:U('searchContents')}" method="get">
+                            <div class="control-group">
+                                <label class="control-label">类型</label>
+                                <div class="controls">
+                                    <input type="hidden" value="{$status}" name="status" />
+                                    <select name="cid" id="cid">
+                                        <option value="0">请选择类别</option>
+                                        <volist name="cats" id="vo" >
+                                            <if condition="$vo['id'] eq $cid">
+                                                <option value="{$vo['id']}" selected>{$vo['pad']}{$vo['name']}
+                                                <else />
+                                                <option value="{$vo['id']}">{$vo['pad']}{$vo['name']}
+                                            </if>
+                                        </volist>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">文章标题</label>
+                                <div class="controls">
+                                    <input type="text" id="title" name="title" value="{$title}" maxlength="64" />
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary sure">搜索</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>文章列表</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>文章</th>
+                                <th>所属类型</th>
+                                <th>创建时间</th>
+                                <th>修改时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="list" id="vo">
+                                <tr>
+                                    <td>{$key+1}</td>
+                                    <td><a href="javascript:void(0);" class="catName" title="{$vo.title}">{$vo.title}</a></td>
+                                    <td><span class="catName"><volist name="cats" id="v"><if condition="$v['id'] eq $vo['cid']">{$v['name']}</if></volist></span></td>
+                                    <td><span class="catName">{$vo.created}</span></td>
+                                    <td><span class="catName">{$vo.modified}</span></td>
+                                    <td>
+                                        <a title="修改" href="{:U('altContent', array('aid' => $vo['id']))}"><i class="icon-pencil"></i></a>
+                                        <if condition="$vo['status'] eq 0">
+                                            <a title="审核" href="javascript:void (0);" data-id="{$vo['id']}" class="audit" ><i class="icon-ok"></i></a>
+                                        </if>
+                                        <a class="del" href="javascript:void(0);" data-id="{$vo['id']}" title="删除" data-title="{$vo['title']}"><i class="icon-trash"></i></a></td>
+                                </tr>
+                            </volist>
+                            <tr><td colspan="6">{$page}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+    <script type="application/javascript">
+        $(function () {
+            //删除
+            $('.del').click(function(){
+                var _id = $(this).attr('data-id'),_title = $(this).attr('data-title');
+                if (!confirm('确定删除《'+_title+'》？')) {
+                    return false;
+                }
+                $.ajax({
+                    type: "GET",
+                    url: "{:U('Content/delContent')}",
+                    data: {id:_id},
+                    success: function(result){
+                        if(result.success){
+                            alert('删除成功！');
+                            window.location.reload();
+                        } else {
+                            alert(result.msg);
+                        }
+                    }
+                });
+            });
+
+            $('#title').keydown(function(e) {
+                //回车事件
+                if (e.which == 13) {
+                    $('.sure').click();
+                }
+            });
+
+            $('.sure').click(function(){
+                fomSubmit();
+            });
+
+            function fomSubmit() {
+                var _cid = $('#cid').val(),
+                        _title = $.trim($('#title').val());
+                if (_cid==0 && _title=='') {
+                    alert('不能缺少搜索条件');
+                    return false;
+                } else {
+                    window.location.href = "{:U('searchContents')}"+'?cid='+_cid+'&title='+_title;
+                }
+            }
+
+            $('.audit').click(function(){
+                var _id = $(this).attr('data-id');
+                $.ajax({
+                    url: "{:U(audit)}",
+                    type: "POST",
+                    dataType: 'json',
+                    data: {id: _id},
+                    success: function(data) {
+                        if (data.success) {
+                            alert(data.msg);
+                            window.location.href = "{:U('index')}";
+                        } else {
+                            alert(data.msg);
+                            return false
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</block>

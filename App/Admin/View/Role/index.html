@@ -1,0 +1,48 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>角色信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width:5%;">编号</th>
+                                    <th style="width:10%;">角色名</th>
+                                    <th style="width:15%;">角色简称</th>
+                                    <th style="width:5%;">状态</th>
+                                    <th style="width:45%;">备注</th>
+                                    <th style="width:10%;">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <volist name="list" id="v"> -->
+                                    <tr>
+                                        <td>{$v.id}</td>
+                                        <td>{$v.name}</td>
+                                        <td>{$v.title}</td>
+                                        <td><if condition="$v[status] eq 1">开启<i class="icon-ok"></i><else/>关闭<i class="icon-remove"></i></if></td>
+                                        <td>{$v.remark}</td>
+                                        <td>
+                                            <a href="{:U('access', array('rid' => $v['id']))}" title="配置权限"><i class="icon-wrench"></i></a>&nbsp;&nbsp;
+                                            <a href="{:U('updateRole', array('id' => $v['id']))}" title="编辑"><i class="icon-pencil"></i></a>&nbsp;&nbsp;
+                                            <a href="{:U('deleteRole', array('id' => $v['id']))}" title="删除" onclick="if(!confirm('确定删除？')){return false;}"><i class="icon-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                <!-- </volist> -->
+                                <tr><td colspan="6">{$page}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

@@ -1,0 +1,40 @@
+<extend name="Public:default" />
+<block name="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="icon-th"></i>
+						</span>
+						<h5>节点编辑</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form action="{:U('altHomenode')}" method="post" class="form-horizontal">
+							<div class="control-group">
+								<label class="control-label">名称</label>
+								<div class="controls">
+									<input type="text" name="name" value="{$list['name']}" style="height:30px;"/>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">描述</label>
+								<div class="controls">
+									<input type="text" name="title" value="{$list['title']}" style="height:30px;"/>
+								</div>
+							</div>
+							<div class="form-actions">
+								<input type="hidden" name="id" value="{$list[id]}"/>
+								<input type="hidden" name="pid" value="{$list[pid]}"/>
+								<input type="hidden" name="level" value="{$list[level]}"/>
+								<button type="submit" class="btn btn-primary">保存</button>
+								<a href="{:U('index')}" class="btn btn-primary">返回</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</block>

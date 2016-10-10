@@ -1,0 +1,356 @@
+[ 2016-03-22T21:01:39+08:00 ] ::1 /clock/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2016-03-22T21:01:44+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0146s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: h /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/42fa7e07fa0e3a197760fab1185f408e.php 第 79 行.
+NOTIC: [8] Undefined variable: breadcrumb /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/42fa7e07fa0e3a197760fab1185f408e.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014869s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2016-03-22T21:01:47+08:00 ] ::1 /clock/index.php/Home/Node/addNode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined variable: h /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/e120bf7285cc23eba5e7abd0dd19ff72.php 第 79 行.
+NOTIC: [8] Undefined variable: breadcrumb /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/e120bf7285cc23eba5e7abd0dd19ff72.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2016-03-22T23:51:00+08:00 ] ::1 /clock/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000241s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000264s ]
+
+[ 2016-03-22T23:51:04+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+NOTIC: [8] Undefined variable: h /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/42fa7e07fa0e3a197760fab1185f408e.php 第 79 行.
+NOTIC: [8] Undefined variable: breadcrumb /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/42fa7e07fa0e3a197760fab1185f408e.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2016-03-22T23:51:10+08:00 ] ::1 /clock/index.php/Home/Node/addNode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: h /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/e120bf7285cc23eba5e7abd0dd19ff72.php 第 79 行.
+NOTIC: [8] Undefined variable: breadcrumb /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/e120bf7285cc23eba5e7abd0dd19ff72.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2016-03-22T23:51:34+08:00 ] ::1 /clock/index.php/Home/Node/addNode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0012s ]
+SQL: INSERT INTO `cl_node` (`name`,`title`,`status`,`display`,`sort`,`remark`,`pid`,`level`) VALUES ('Admin','后台管理','1','0','0','','0','1') [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002826s ]
+NOTIC: [8] Undefined variable: h /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/e120bf7285cc23eba5e7abd0dd19ff72.php 第 79 行.
+NOTIC: [8] Undefined variable: breadcrumb /Applications/XAMPP/xamppfiles/htdocs/clock/Runtime/Cache/Home/e120bf7285cc23eba5e7abd0dd19ff72.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003093s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000005s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-03-22T23:51:35+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0099s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:52:27+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0099s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:52:29+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0096s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:52:29+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:52:29+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:52:47+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0002s ]
+
+[ 2016-03-22T23:54:58+08:00 ] ::1 /clock/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000253s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000276s ]
+
+[ 2016-03-22T23:56:10+08:00 ] ::1 /clock/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000294s ]
+
+[ 2016-03-22T23:56:13+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0099s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0006s ]
+
+[ 2016-03-22T23:57:17+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0093s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:57:18+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0099s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0003s ]
+
+[ 2016-03-22T23:57:19+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0098s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:57:20+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0096s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0005s ]
+
+[ 2016-03-22T23:57:20+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0006s ]
+
+[ 2016-03-22T23:57:20+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0003s ]
+
+[ 2016-03-22T23:58:23+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0006s ]
+ERR: Think\Controller:node_merge方法不存在！
+
+[ 2016-03-22T23:58:36+08:00 ] ::1 /clock/index.php/Home/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `cl_node` [ RunTime:0.0098s ]
+SQL: SELECT `id`,`name`,`title`,`pid` FROM `cl_node` ORDER BY sort  [ RunTime:0.0004s ]
+

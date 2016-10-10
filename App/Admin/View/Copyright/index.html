@@ -1,0 +1,32 @@
+<extend name="Public:default" />
+<block name="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="icon-th"></i>
+						</span>
+						<h5>链接添加</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form action="{:U('addCopyright')}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                            <div class="control-group">
+                                <label class="control-label">添加图标</label>
+                                <div class="controls">
+                                    <input type="file" id="exampleInputFile" name="img">
+                                    <p class="help-block">建议图标大小为：120*30px</p>
+                                </div>
+                            </div>
+							<div class="form-actions">
+								<button type="submit" class="btn btn-primary">保存</button>
+								<button type="reset" class="btn btn-primary">重置</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</block>

@@ -1,0 +1,50 @@
+<extend name="Public:default" />
+<block name="container">
+	<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="widget-box">
+						<div class="widget-title">
+							<span class="icon">
+								<i class="icon-th"></i>
+							</span>
+							<h5>节点列表</h5>
+						</div>
+						<div class="widget-content nopadding" id="wrap">
+							<a href="{:U('Node/addNode')}" class="btn btn-primary btn-large">添加应用</a>
+							<!-- <volist name="list" id="app"> -->
+								<div class="app">
+									<p>
+										<strong>{$app.title}</strong>
+										[<a href="{:U('Node/addNode', array('pid' => $app['id'], 'level' => 2))}">添加控制器</a>]
+										[<a href="{:U('updateNode', array('id' => $app['id']))}">修改</a>]
+										[<a href="{:U('deleteNode', array('id' => $app['id']))}" onclick="if(!confirm('确认删除？')){return false;}">删除</a>]
+									</p>
+									
+									<!-- <volist name="app.child" id="action"> -->
+										<dl>
+											<dt>
+												<strong>{$action.title}</strong>
+												[<a href="{:U('addNode', array('pid' => $action['id'], 'level' => 3))}">添加方法</a>]
+												[<a href="{:U('updateNode', array('id' => $action['id']))}">修改</a>]
+												[<a href="{:U('deleteNode', array('id' => $action['id']))}" onclick="if(!confirm('确认删除？')){return false;}">删除</a>]
+											</dt>
+											<!-- <volist name='action.child' id='method'>  -->
+												<dd>
+													<span>{$method.title}</span>
+													[<a href="{:U('updateNode', array('id' => $method['id']))}">修改</a>]
+													[<a href="{:U('deleteNode', array('id' => $method['id']))}" onclick="if(!confirm('确认删除？')){return false;}">删除</a>]
+												</dd>
+											<!-- </volist> -->
+										</dl>
+									
+									
+									<!-- </volist> -->
+								</div>
+							<!-- </volist> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</block>

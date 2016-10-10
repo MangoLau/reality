@@ -1,0 +1,101 @@
+body,a,p,span,ul,ol{  margin: 0;  padding: 0;  border: 0;}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+#header{
+    min-width: 1080px;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+.logo{
+    width: 30px;
+    height: 30px;
+    margin: 20px 30px;
+}
+.loginer{
+    float: right;
+    margin: 20px 30px;
+}
+#main{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1080px;
+    min-height: 500px;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+#main>.left{
+    float: left;
+    width: 10%;
+    height: 100%;
+    border-right: 1px solid #000000;
+    text-align: center;
+}
+#main>.left>ul>.first-link,#main>.left>ul .second-link{
+    border-bottom: 1px solid #232323;
+}
+#main>.left>ul>.first-link{
+    height: 30px;
+    font-size: 18px;
+}
+#main>.left>ul .second-link{
+    height: 28px;
+    font-size: 16px;
+}
+#main>.left>ul>.first-link:hover,#main>.left>ul>li>ul>.second-link:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    font-weight: bold;
+}
+#main>.left>ul>.childs-link{
+    display: none;
+}
+.linkactive{
+    background-color: lightblue;
+    font-weight: bold;
+}
+/**************内容部分****************/
+#main>.content{
+    width: 89%;
+    float: right;
+}
+#main>.content table{
+    border-collapse:collapse;
+    width: 100%;
+    border: 1px solid #000000;
+}
+#main>.content table tr th{
+    border: 1px solid #000;
+    text-align: center;
+}
+#main .content table tr td{
+    width: 10%;
+    border: 1px solid #000;
+    text-align: left;
+}
+#main>.content .act:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    font-weight: bold;
+}
+#bottom{
+    height: 80px;
+    text-align: center;
+}
+
+
+
+
+.button{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    font-weight: bold;}

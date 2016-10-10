@@ -1,0 +1,34 @@
+<!-- 首页内容右侧 start -->
+<div id="right">
+    <!-- 新发表文章 start -->
+    <div class="wrap-link">
+        <h2>最新文章</h2>
+        <ul>
+            <volist name="newest" id="v">
+                <li><a href="{:U('Content/baseList',array('id'=>$v['id']))}" title="{$v['title']}">{$v['title']}</a></li>
+            </volist>
+        </ul>
+    </div>
+    <!-- 新发表文章 end -->
+    <!-- 热点文章 start -->
+    <div class="wrap-link">
+        <h2>最热文章</h2>
+        <ul>
+            <volist id="v" name="hotest">
+                <li><a href="{:U('Content/baseList',array('id'=>$v['id']))}" title="{$v['title']}">{$v['title']}</a></li>
+            </volist>
+        </ul>
+    </div>
+    <!-- 热点文章 end -->
+    <!-- 随机文章 start -->
+    <div class="wrap-link">
+        <h2>随机文章</h2>
+        <ul>
+            <volist name="rands" id="v">
+                <li><a href="{:U('Content/baseList',array('id'=>$v['id']))}" title="{$v['title']}">{$v['title']}</a></li>
+            </volist>
+        </ul>
+    </div>
+    <!-- 随机文章 end -->
+</div>
+<!-- 首页内容右侧 end -->

@@ -1,0 +1,68 @@
+<extend name="Public:default" />
+<block name="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon">
+                            <i class="icon-th"></i>
+                        </span>
+                        <h5>类型列表</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>类型名</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="list" id="vo">
+                                <tr>
+                                    <td>{$i}</td>
+                                    <td><span class="catName">{$vo.pad}{$vo.name}</span></td>
+                                    <td>
+                                        <a href="{:U('altCategory', array('id' => $vo['id']))}" title="修改" data-id="{$vo['id']}"><i class="icon-pencil"></i></a>
+                                        <a class="act add" href="{:U('addCategory', array('pid' => $vo['id']))}" title="添加子类" data-id="{$vo['id']}"><i class="icon-plus"></i></a>
+                                        <a class="act del" href="javascript:void(0);" title="删除" data-name="{$vo['name']}" data-id="{$vo['id']}"><i class="icon-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </volist>
+                            <tr><td colspan="3">{$page}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+    <script type="application/javascript">
+        $(document).ready(function(){
+            $('.del').on('click',function(){
+                var _id = $(this).attr('data-id'),
+                        _name = $(this).attr('data-name');
+                if (!confirm('确定删除《'+_name+'》？')) {
+                    return false;
+                }
+                $.ajax({
+                    type: "GET",
+                    url: "{:U('Category/delCategory')}",
+                    data: {id:_id},
+                    success: function(result){
+                        if(result.success){
+                            alert('删除成功！');
+                            window.location.reload();
+                        } else {
+                            alert(result.msg);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</block>
