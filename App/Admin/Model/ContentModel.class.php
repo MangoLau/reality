@@ -16,8 +16,6 @@ class ContentModel extends Model{
     protected $_validate = array(
         array('title','require','标题必须！', self::MUST_VALIDATE),
         array('title','1,64','标题长度不能超过64位',self::MUST_VALIDATE,'length',self::MODEL_BOTH),
-        array('keyword','0,256','SEO关键词长度不能超过256位',self::MUST_VALIDATE,'length',self::MODEL_BOTH),
-        array('description','0,256','SEO描述长度不能超过256位',self::MUST_VALIDATE,'length',self::MODEL_BOTH),
         array('content','require','文章内容必须！',self::MUST_VALIDATE),
 //        array('content','1,10000','文章内容长度不能超过10000位',self::MUST_VALIDATE,'length',self::MODEL_BOTH),
     );

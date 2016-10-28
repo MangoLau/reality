@@ -1,0 +1,32 @@
+[ 2016-10-28T15:24:48+08:00 ] ::1 /reality/index.php/Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `r_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `r_user` WHERE `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `r_user` SET `last_login_time`='1477639488',`login_count`=login_count+1,`last_login_ip`='0.0.0.0' WHERE `id` = 1 [ RunTime:0.0225s ]
+
+[ 2016-10-28T15:41:41+08:00 ] ::1 /reality/index.php/Admin/Nav/getHomenodeByPid.html?pid=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `r_homenode` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `r_homenode` WHERE `pid` = 1  [ RunTime:0.0002s ]
+
+[ 2016-10-28T15:41:46+08:00 ] ::1 /reality/index.php/Admin/Nav/addNav.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `r_nav` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `r_nav` WHERE `cid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `r_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `r_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `r_nav` (`cid`,`link`,`nav_name`,`type`,`pid`,`display`,`created`) VALUES ('1','Content/baseList?cid=1','租房信息','1','0','1','2016-10-28 15:41:46') [ RunTime:0.0002s ]
+
+[ 2016-10-28T15:42:19+08:00 ] ::1 /reality/index.php/Admin/Nav/getHomenodeByPid.html?pid=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `r_homenode` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `r_homenode` WHERE `pid` = 1  [ RunTime:0.0002s ]
+
